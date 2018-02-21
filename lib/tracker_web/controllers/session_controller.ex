@@ -10,7 +10,7 @@ defmodule TrackerWeb.SessionController do
       conn
       |> put_session(:user_id,user.id)
       |> put_flash(:info,"Welcome back, #{user.name}!")
-      |> redirect(to: issue_path(conn,:landing))
+      |> redirect(to: "/tasks/landing")
     else
       conn
       |> put_flash(:info,"Cannot create Session!")
@@ -19,10 +19,10 @@ defmodule TrackerWeb.SessionController do
   end
 
   def delete(conn, _params) do
-      conn
-      |> delete_session(:user_id)
-      |> put_flash(:info,"Logged Out!")
-      |> redirect(to: page_path(conn,:index))
+    conn
+    |> delete_session(:user_id)
+    |> put_flash(:info,"Logged Out!")
+    |> redirect(to: page_path(conn,:index))
   end
 
 end

@@ -6,12 +6,12 @@ defmodule TrackerWeb.UserController do
 
   def login(conn, _params) do
     changeset = Accounts.change_user(%User{})
-    render(conn, "login.html",changeset: changeset)
+    render(conn, "login.html", changeset: changeset)
   end
 
   def index(conn, _params) do
     users = Accounts.list_users()
-    render(conn, "index.html" , users: users)
+    render(conn, "index.html", users: users)
   end
 
   def new(conn, _params) do

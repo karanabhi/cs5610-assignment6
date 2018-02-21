@@ -36,7 +36,7 @@ defmodule TrackerWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_tracker_key",
-    signing_salt: "YurBMqm3"
+    signing_salt: "5LKapv6U"
 
   plug TrackerWeb.Router
 

@@ -1,0 +1,30 @@
+<h1 class="center-block">Create new Task:</h1>
+<hr><br/>
+
+<!-- session_path(@conn, :create) -->
+<div class="container">
+<%= form_tag(task_path(@conn, :create), method: :post) do %>
+<div class="form-group">
+  <label for="title">*Title:</label>
+  <p><input type="text" name="title" id="title" class="form-control"></p>
+
+  <label for="description">Description:</label>
+  <p><textarea rows="5" cols="90" name="description" id="description" class="form-control"></textarea></p>
+
+  <label for="assigned_to">Assigned To:</label>
+  <p><input type="number" name="assigned_to" id="assigned_to" class="form-control"></p>
+
+  <p><input type="hidden" name="status" id="status" class="form-control" value="In Progress"></p>
+
+  <label for="assignedTime">Assigned Time:</label>
+  <p><input step="15" type="number" name="assignedTime" id="assignedTime" class="form-control"></p>
+  <span style="color:red">15 Minutes Increments</span>
+
+  <p><input type="hidden" name="user_id" id="user_id" value=<%= @current_user.id %> class="form-control"></p>
+
+  <p><button class="btn btn-primary">Create</button></p>
+</div>
+<div>
+  <span><%= link "Back", to: task_path(@conn, :index) %></span>
+  <% end %>
+</div>

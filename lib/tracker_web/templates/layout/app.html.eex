@@ -28,7 +28,7 @@
         <%= link "Log Out", to: "/session", method: :delete %>
       </p>
       <% else %>
-      <p><%= link "Log in!", to: "/user/login", method: :get %></p>
+      <p><%= link "Log in!", to: "/users/login", method: :get %></p>
       <% end %>
     </div>
   </div>

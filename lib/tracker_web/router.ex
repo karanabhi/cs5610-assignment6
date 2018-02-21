@@ -27,14 +27,13 @@ defmodule TrackerWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/user/login", UserController, :login
-    get "/issues/landing", IssueController, :landing
+    get "/users/login", UserController, :login
+    get "/tasks/landing", TaskController, :landing
     post "/session",SessionController,:create
     delete "/session",SessionController,:delete
 
-    resources "/user", UserController
-    resources "/issues", IssueController
-
+    resources "/users", UserController
+    resources "/tasks", TaskController
   end
 
   # Other scopes may use custom stacks.

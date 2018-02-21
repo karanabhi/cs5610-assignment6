@@ -11,7 +11,7 @@
     </div>
     <div class="col-md-6">
       <p>
-        <a href=<%= issue_path(@conn, :index) %> class="btn btn-info">List of Tasks</a>
+        <a href="/tasks/" class="btn btn-info">List of Tasks</a>
       </p>
     </div>
   </div>

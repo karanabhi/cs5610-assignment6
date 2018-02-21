@@ -6,6 +6,7 @@
   <% end %>
 
   <div class="form-group">
+    *
     <%= label f, :title, class: "control-label" %>
     <%= text_input f, :title, class: "form-control" %>
     <%= error_tag f, :title %>
@@ -18,15 +19,23 @@
   </div>
 
   <div class="form-group">
-    <%= label f, :status, class: "control-label" %>
-    <%= text_input f, :status, class: "form-control" %>
-    <%= error_tag f, :status %>
+    <%= label f, :assigned_to, class: "control-label" %>
+    <%= number_input f, :assigned_to, class: "form-control" %>
+    <%= error_tag f, :assigned_to %>
   </div>
 
   <div class="form-group">
-    <%= label f, :assigned_time, class: "control-label" %>
-    <%= number_input f, :assigned_time, class: "form-control" %>
-    <%= error_tag f, :assigned_time %>
+    <%= label f, :status, class: "control-label" %>
+    <%= text_input f, :status, class: "form-control" %>
+    <%= error_tag f, :status %>
+    <span style="color:red">In Progress or Completed</span>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :assignedTime, class: "control-label" %>
+    <%= number_input f, :assignedTime, class: "form-control" %>
+    <%= error_tag f, :assignedTime %>
+    <span style="color:red">15 Minutes Increments</span>
   </div>
 
   <div class="form-group">
